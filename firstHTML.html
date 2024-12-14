@@ -26,6 +26,16 @@
     <title>私の最初のウェブページ</title>
 </head>
 <body>
+    <script>
+        const today = new Date();
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long'
+        };
+        document.write(`<p>今日の日付: ${today.toLocaleDateString('ja-JP', options)}</p>`);
+    </script>
     <!-- メインタイトル -->
     <h1>ソフトウェア開発の世界へようこそ！</h1>
     <p>プログラミングの楽しさを一緒に探求しましょう。</p>
