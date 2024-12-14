@@ -26,22 +26,26 @@
     <title>私の最初のウェブページ</title>
 </head>
 <body>
+    <div id="today"></div>
     <script>
-        const today = new Date();
-        const options = {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long'
+        window.onload = function() {
+            const today = new Date();
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                weekday: 'long'
+            };
+            document.getElementById('today').innerHTML = 
+                `<p>今日の日付: ${today.toLocaleDateString('ja-JP', options)}</p>`;
         };
-        document.write(`<p>今日の日付: ${today.toLocaleDateString('ja-JP', options)}</p>`);
     </script>
     <!-- メインタイトル -->
     <h1>ソフトウェア開発の世界へようこそ！</h1>
     <p>プログラミングの楽しさを一緒に探求しましょう。</p>
     
     <!-- 学習コンテンツセクション -->
-    <h2>開発で学べること</h2>
+    <h2>開発で学べることは以下です</h2>
     <ul>
         <li>プログラミング言語（Python, JavaScript など）</li>
         <li>アプリケーション開発</li>
