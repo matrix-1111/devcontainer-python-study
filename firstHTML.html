@@ -28,7 +28,8 @@
 <body>
     <div id="today"></div>
     <script>
-        window.onload = function() {
+        // DOMContentLoadedイベントを使用
+        document.addEventListener('DOMContentLoaded', function() {
             const today = new Date();
             const options = {
                 year: 'numeric',
@@ -38,7 +39,7 @@
             };
             document.getElementById('today').innerHTML = 
                 `<p>今日の日付: ${today.toLocaleDateString('ja-JP', options)}</p>`;
-        };
+        });
     </script>
     <!-- メインタイトル -->
     <h1>ソフトウェア開発の世界へようこそ！</h1>
